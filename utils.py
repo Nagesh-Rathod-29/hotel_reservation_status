@@ -8,15 +8,15 @@ class ReservationClass():
     def __init__(self):
         #print("This is init method of Resevation class")
 
-        with open(r"artifacts\\model.pkl",'rb') as file:
+        with open(r"artifacts//model.pkl",'rb') as file:
             self.model = pickle.load(file)
 
         
-        with open(r"artifacts\\scaler.pkl",'rb') as file:
+        with open(r"artifacts//scaler.pkl",'rb') as file:
             self.scaler = pickle.load(file)
 
        
-        with open(r"artifacts\\model_data.json",'r') as file:
+        with open(r"artifacts//model_data.json",'r') as file:
             self.model_data = json.load(file)
 
     def result(self,no_of_adults,
