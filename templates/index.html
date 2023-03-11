@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation Status</title>
+</head>
+<body style="text-align: justify;">
+    <h1 style="color:dark;text-align: center;background-color:lightblue;"><strong>HOTEL RESERVSTION STATUS</strong> </h1>
+
+    <style>
+        body {
+          background-image: url(https://static.vecteezy.com/system/resources/previews/003/301/435/original/online-hotel-reservation-concept-with-ticket-and-smartphone-and-maps-free-vector.jpg);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+    <form action="/predict" method="post">
+        <strong>
+        <div style="font-size: larger;font-style: oblique;">
+        <label >Number of adults ?</label>
+        <select name="no_of_adults">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3 or More</option>    
+        </select>
+        
+        <label >Number of Childrens ?</label>
+        <select name="no_of_children">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3 or More</option>    
+        </select>
+        <br>
+        <br>
+        <label >Number of Weekend nights ?</label>
+        <select name="no_of_weekend_nights">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4 or More</option>    
+        </select>
+        <label >Number of Week nights ?</label>
+        <select name="no_of_week_nights">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10 or More</option>    
+        </select>
+        <br>
+        <br>
+
+        <label >Type of meal plans ?</label>
+        <select name="type_of_meal_plan">
+            <option value="Not selected">Not selected</option>
+            <option value="Meal Plan 1">Meal Plan 1</option>
+            <option value="Meal Plan 2">Meal Plan 2</option>
+            <option value="Meal Plan 3">Meal Plan 3</option>
+        </select>
+        <br>
+        <br>
+
+        <label> Does the customer require a car parking space? (0 - No, 1- Yes)</label>
+        <select name="required_car_parking_space">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        <br>
+
+        <label>Select the type of Room :</label>
+        <select name="room_type_reserved">
+            <option value="Room_Type 1">Room Type 1</option>
+            <option value="Room_Type 2">Room Type 2</option>
+            <option value="Room_Type 3">Room Type 3</option>
+            <option value="Room_Type 4">Room Type 4</option>
+            <option value="Room_Type 5">Room Type 5</option>
+            <option value="Room_Type 6">Room Type 6</option>
+            <option value="Room_Type 7">Room Type 7</option>
+        </select>
+        <br>
+        <br>
+        <label>Number of days between the date of booking and the arrival date ?</label>
+        <input type="text" name="lead_time" size="10px">
+        <br>
+        <br>
+
+        <label>Arrival Year :</label>
+        <select name="arrival_year">
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+        </select>
+        <label>Arrival Month :</label>
+        <input type="text" name="arrival_month" placeholder="enter the month of arrival">
+
+        <label>Arrival Date :</label>
+        <input type="text" name="arrival_date" placeholder="Enter the date of month">
+        <br>
+        <br>
+
+        <label>Select Market Segment : </label>
+        <select name="market_segment_type">
+            <option value="Online">Online</option>
+            <option value="Offline">Offline</option>
+            <option value="Corporate">Corporate</option>
+            <option value="Complementary">Complementary</option>
+            <option value="Aviation">Aviation</option>
+        </select>
+        <br>
+        <br>
+
+        <label >Is the customer a repeated guest ?(0 - No, 1- Yes)</label>
+        <select name="repeated_guest">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br>
+        <br>
+
+        <label> Number of previous bookings that were canceled by the customer prior to the current booking:</label>
+        <select name="no_of_previous_cancellations">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2 or More</option>
+        </select>
+        <br>
+        <br>
+
+        <label> Number of previous bookings not canceled by the customer prior to the current booking:</label>
+        <select name="no_of_previous_bookings_not_canceled">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6 or More</option>
+        </select>
+        <br>
+        <br>
+        <label>Average price per day of the reservation :</label>
+        <input type="text" name="avg_price_per_room" placeholder="Enter values between 0 to 180">
+        <br>
+        <br>
+        <label> Total number of special requests made by the customer ? </label>        
+        <select name="no_of_special_requests">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br>
+        <br></div></strong>
+
+        <input type="submit" value="SUBMIT">
+        <br>
+        <h1 style="text-align: center;color: royalblue;background-color: white;"><strong><b>HOTEL RESERVSTION STATUS :<i>{{predict}} </i></b></strong></h1>
+    </form>
+    
+</body>
+</html>
